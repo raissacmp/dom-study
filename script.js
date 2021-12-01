@@ -1,36 +1,38 @@
-const naruto = document.getElementById("naruto")
-console.log("🚀 ~ file: script.js ~ line 2 ~ naruto", naruto)
+// ===============================QUERY SELECTOR==================================================
 
-const gridSection = document.getElementsByClassName('grid-section')
-console.log("🚀 ~ file: script.js ~ line 4 ~ gridSection", gridSection)
+// const naruto = document.getElementById("naruto")
+// console.log("🚀 ~ file: script.js ~ line 2 ~ naruto", naruto)
 
-const firstLi = document.querySelector('li')
-console.log("🚀 ~ file: script.js ~ line 7 ~ firstLi", firstLi)
+// const gridSection = document.getElementsByClassName('grid-section')
+// console.log("🚀 ~ file: script.js ~ line 4 ~ gridSection", gridSection)
 
-const firstUl = document.querySelector('ul')
-console.log("🚀 ~ file: script.js ~ line 10 ~ firstUl", firstUl)
+// const firstLi = document.querySelector('li')
+// console.log("🚀 ~ file: script.js ~ line 7 ~ firstLi", firstLi)
 
-const linkInter =  document.querySelector('[href^="#"]') //seleciona o que começa com:
-console.log("🚀 ~ file: script.js ~ line 13 ~ linksInters", linkInter)
+// const firstUl = document.querySelector('ul')
+// console.log("🚀 ~ file: script.js ~ line 10 ~ firstUl", firstUl)
 
-const imgNaruto = document.querySelectorAll(".naruto img")
-console.log("🚀 ~ file: script.js ~ line 16 ~ imgNaruto", imgNaruto)
+// const linkInter =  document.querySelector('[href^="#"]') //seleciona o que começa com:
+// console.log("🚀 ~ file: script.js ~ line 13 ~ linksInters", linkInter)
 
-const gridSectionHMTML = document.getElementsByClassName('grid-section')
-console.log("🚀 ~ file: script.js ~ line 20 ~ gridSectionHMTML", gridSectionHMTML)
+// const imgNaruto = document.querySelectorAll(".naruto img")
+// console.log("🚀 ~ file: script.js ~ line 16 ~ imgNaruto", imgNaruto)
 
-const gridSectionNode = document.querySelectorAll('.grid-section')
-console.log("🚀 ~ file: script.js ~ line 23 ~ gridSectionNode", gridSectionNode)
+// const gridSectionHMTML = document.getElementsByClassName('grid-section')
+// console.log("🚀 ~ file: script.js ~ line 20 ~ gridSectionHMTML", gridSectionHMTML)
+
+// const gridSectionNode = document.querySelectorAll('.grid-section')
+// console.log("🚀 ~ file: script.js ~ line 23 ~ gridSectionNode", gridSectionNode)
 
 // firstUl.classList.add('grid-section')
 
-gridSectionNode.forEach((item, index)=> {
-    console.log("🚀 ~ file: script.js ~ line 28 ~ gridSectionNode.forEach ~ item", item)
-    console.log("🚀 ~ file: script.js ~ line 28 ~ index", index)
-}) 
+// gridSectionNode.forEach((item, index)=> {
+//     console.log("🚀 ~ file: script.js ~ line 28 ~ gridSectionNode.forEach ~ item", item)
+//     console.log("🚀 ~ file: script.js ~ line 28 ~ index", index)
+// }) 
 
-const arrayGrid = Array.from(gridSectionHMTML)
-console.log("🚀 ~ file: script.js ~ line 33 ~ arrayGrid", arrayGrid)
+// const arrayGrid = Array.from(gridSectionHMTML)
+// console.log("🚀 ~ file: script.js ~ line 33 ~ arrayGrid", arrayGrid)
 
 // Exercício
 
@@ -53,3 +55,40 @@ console.log("🚀 ~ file: script.js ~ line 51 ~ firsth2", firsth2)
 // Selecione o último p do site
 const paragraph = document.querySelectorAll('p')
 console.log("🚀 ~ file: script.js ~ line 54 ~ paragraph", paragraph[paragraph.length -1])
+
+// ===============================FOR EACH e ARROW FUNCTION==================================================
+
+// const images = document.querySelectorAll('img')
+// console.log("🚀 ~ file: script.js ~ line 62 ~ images", images)
+
+// let i = 0
+// images.forEach((item, index, array) => {console.log(item, index, array)})
+
+const itemsMenu = document.getElementsByClassName('item-menu');
+const itemsMenuArray = Array.from(itemsMenu); // transforma em um array
+// itemsMenuArray.forEach(function(item){
+// console.log(item);
+// });
+
+itemsMenuArray.forEach((item) => {console.log(item)})
+
+
+// Exercício
+// Mostre no console cada parágrado do site
+const paragraphs = document.querySelectorAll('p')
+paragraphs.forEach((paragraph) => {console.log(paragraph)})
+
+// Mostre o texto dos parágrafos no console
+
+paragraphs.forEach((paragraph) => {console.log(paragraph.innerText)})
+
+// Como corrigir os erros abaixo:
+const imgs = document.querySelectorAll('img');
+imgs.forEach((item, index) => {
+ console.log(item, index);
+});
+let i = 0;
+imgs.forEach(() => {
+ console.log(i++)
+});
+imgs.forEach(() => i++)
